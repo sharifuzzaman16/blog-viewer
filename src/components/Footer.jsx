@@ -5,7 +5,7 @@ const Footer = () => {
         <>
             <footer className='bg-[#0b0b0b] py-10'>
                 <div className='container mx-auto'>
-                    <div className='flex justify-between'>
+                    <div className='flex flex-col md:flex-row space-y-6 justify-between'>
                         <ul className='flex flex-col gap-2'>
                             <h6 className="text-2xl font-bold">Services</h6>
                             <li className="text-base font-medium hover:underline cursor-pointer text-gray-300">Branding</li>
