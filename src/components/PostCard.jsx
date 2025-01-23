@@ -15,7 +15,7 @@ const PostCard = ({ userId, id, title, body }) => {
                     <span className="text-gray-200 text-xs">User ID: {userId}</span>
                     <span className="ml-4 text-gray-200 text-xs">Post ID: {id}</span>
                 </div>
-                <Link href={`/posts/${id}`} className="text-sm text-white bg-blue-500 hover:bg-blue-600 px-3 py-1 rounded-md shadow">View Details</Link>
+                <Link href={`/posts/${id}`} className="text-sm text-white border border-[#333] px-3 py-1 rounded-md shadow">View Details</Link>
             </div>
         </div>
     );
