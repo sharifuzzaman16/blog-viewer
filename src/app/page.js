@@ -8,8 +8,15 @@ const Home = async () => {
 
 
   return (
-    <div>
-
+    <div className=''>
+      <div className='w-1/4 mt-10 mx-auto border-b border-[#333] p-4'>
+        <h1 className='text-3xl font-bold text-center'>Blog Posts</h1>
+      </div>
+      <div className='grid grid-cols-3 gap-10 py-20'>
+        {
+          posts.map((post) => <PostCard key={post.id} userId={post.userId} id={post.id} title={post.title} body={post.body}></PostCard>)
+        }
+      </div>
     </div>
   );
 };
