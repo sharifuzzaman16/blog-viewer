@@ -1,8 +1,16 @@
+import React from 'react';
 
-export default function Home() {
+const Home = async () => {
+
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const posts = await res.json();
+  console.log(posts)
+
   return (
     <div>
-      this is the home page
+      
     </div>
   );
-}
+};
+
+export default Home;
