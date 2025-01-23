@@ -3,16 +3,16 @@ import React from 'react';
 const DetailsPage = async ({ params }) => {
 
     const { id } = await params;
-    // Sample post data
-    const post = {
-        userId: 1,
-        id: 1,
-        title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-        body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-    };
+
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    const post = await res.json();
+
 
     return (
-        <div className="flex justify-center items-center py-10 px-4">
+        <div className="flex flex-col items-center py-10 px-4">
+            <div className='w-1/4 my-10 mx-auto border-b border-[#333] p-4'>
+                <h1 className='text-3xl font-bold text-center'>Post Details</h1>
+            </div>
             <div className="max-w-3xl w-full border border-[#333] shadow-md rounded-lg p-6">
                 <h1 className="text-2xl font-bold text-white mb-4">{post.title}</h1>
                 <p className="text-gray-300 leading-relaxed mb-6">{post.body}</p>
